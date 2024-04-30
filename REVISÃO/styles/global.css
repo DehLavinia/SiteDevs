@@ -1,0 +1,54 @@
+/*
+    PADRÃO CSS PARA INICIAR PROJETOS PASSO A PASSO
+    1° RESETAR AS MARGENS E PADDINGS 
+    2° CRIAR ELEMENTO :ROOT PARA COLOCAR AS CORES 
+    3° DEFINIR OS PADROES DO HTML LARGURA E ALTURA POIS ELE É O ELEMENTO PAI PRINCIPAL ENTAO POR ELE VOCE DEFINE A LARGURA MAXIMA PARA TODOS OS OUTROS
+    4° PASSAR ALGUNS PADROES PARA O BODY, LARGURA, FONT SIZE E BACKGROUND SAO ALGUNS DOS MAIS USADOS.
+*/
+
+* {
+    margin: 0; /*Tira a margen que ja vem por padrão de todos elementos*/
+    padding: 0;/*Tira o padding (preenchimento interno) que ja vem por padrão de todos elementos*/
+    box-sizing: border-box; /*não deixa o conteudo passar da largura ou altura que voce definir*/
+    border: 1px solid tomato; /*voce pode usar esse comando para fazer todos elementos ficar com uma borda em volta, e voce ver a largura deles, altura alinhamento, ai voce pode ajustar e remover essa linha*/
+    
+}
+/*:root é o elemento raiz, aonde voce usa para criar as variaveis para usar em varios lugares*/
+:root{
+    --primary-color: #f350c5; /*toda variavel voce vai dar o nome dela, dois pontos, e qual valor voce quer que ela tenha*/
+    --secondary-color: #fff; /*todas as cores que voce criar para um site voce cria aqui e da nomes faceis de usar*/
+    /*abaixo esta um exemplo de como voce pode dar nome para as cores, em vez de escrever vermelho claro, vermelho escuro
+    voce escreve o nome da cor e depois um numero que vai de 100 até 900 sendo o 100 o mais claro e o 900 o mais escuro, logico q pode usar qualquer numero mais esse é um padrao que o povo ja usa por ai*/
+    --red-100: red;
+    --red-200: rgb(151, 12, 12);
+    --red-500: rgb(92, 12, 12);
+    --red-900: rgb(33, 3, 3);
+
+    /*exemplo de uso de variaveis:
+    color: var(--red-100)
+    */
+
+}
+
+
+/*uso para setar o tamanho maximo do documento em largura e altura*/
+html{
+    width: 100vw /*largura da tela vw (viewport width) nessa linha estou limitando todos elementos a largura da tela para evitar barra de rolagem*/;
+    height: 100vh; /*altura do altura vh (viewport height)*/
+    font-size: 62.5%; /*EXPLICAÇÃO DESSA TATICA:
+        1rem = 16px, SÓ QUE PARA FICAR CONVERTENDO PX EM REM VOCE PRECISA DIVIR 100 POR 16 PARA SABER QUANTO AQUELE VALOR VALE EM REM
+        100 / 16 = 6.25rem da esse numero quebrado oque dificulta fazer contas assim de cabeça.
+        ENTAO DEFINIMOS QUE O FONT SIZE PADRAO DA PAGINA É DE 62.5% ISSO VAI FAZER COM QUE CADA REM SEJA IGUAL A 10PX
+        1rem = 10px E AI A CONTA PASSA A SER POSSIVEL FAZER DE CABEÇA POR QUE:
+        100 / 10 = 10rem DIVIDIR POR 10 É MUITO MAIS FACIL.
+        ENTAO TENTA USAR REM SEMPRE NO LUGAR DE PX PARA QUE SEU SITE FIQUE BEM RESPONSIVO.
+        */ 
+}
+
+body{
+    width: 100%; /*width 100% da largura do pai (html) para que sempre evitar rolagem na pagina*/
+    font-size: 1.6rem /*faz toda font do site ficar com 16px por padrão*/;
+}
+
+
+

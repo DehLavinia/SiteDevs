@@ -1,0 +1,245 @@
+*,
+a,
+input,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+.container-loja,
+.container-categorias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: 2rem auto 1rem;
+  position: relative;
+
+  & h2 i {
+    color: violet;
+  }
+
+  & h2 {
+    font-family: poppins;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 2rem;
+  }
+}
+
+.gradeDeProdutos {
+  width: 100%;
+  max-width: 1280px;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.cardProduto {
+  width: 25rem;
+  height: 35rem;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.containerCard3d {
+  width: 200px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.frontCard, .backCard {
+  width: 200px;
+  position: absolute;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+.imgFrontCard, .imgBackCard{
+    width: 100%;
+    border-radius: 10px;
+}
+.codigoProdutoCard{
+    font-weight: 600;
+    color: var(--azul-800);
+    font-size: 1.6rem;
+    line-height: 1;
+    width: 220px;
+    margin: 210px auto 5px auto;
+    text-align: center;
+}
+.preçoProdutoCard{
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.nota{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.vejaMaisBtn{
+    width: 150px;
+    margin: auto;
+    height: 40px;
+    min-height: 40px;
+    position: absolute;
+    bottom: 5px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--purple-400);
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.vejaMaisBtn:hover{
+    background-color: var(--purple-800);
+    
+}
+.frontCard {
+    transform: rotateY(0deg)
+}
+
+.backCard {
+    transform: rotateY(180deg)
+}
+
+.cardProduto:hover .frontCard {
+    transform: rotateY(-180deg);
+}
+
+.cardProduto:hover .backCard {
+    transform: rotateY(0deg);
+}
+
+
+
+@media (max-width: 768px) {
+
+  
+.gradeDeProdutos {
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.cardProduto {
+  width: 20rem;
+  height: 30rem;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 11px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.containerCard3d {
+  width: 150px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.frontCard, .backCard {
+  width: 150px;
+  position: absolute;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+.imgFrontCard, .imgBackCard{
+    width: 100%;
+    border-radius: 10px;
+}
+.codigoProdutoCard{
+    font-weight: 500;
+    color: var(--azul-800);
+    font-size: 1.2rem;
+    line-height: 1;
+    width: 200px;
+    margin: 200px auto 4px auto;
+    text-align: center;
+}
+.preçoProdutoCard{
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.nota{
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.vejaMaisBtn{
+    width: 100%px;
+    margin: auto;
+    height: 25px;
+    min-height: 15px;
+    position: absolute;
+    bottom: 2px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--purple-400);
+    cursor: pointer;
+    flex-wrap: wrap;
+
+}
+
+.vejaMaisBtn:hover{
+    background-color: var(--purple-800);
+    
+}
+.frontCard {
+    transform: rotateY(0deg)
+}
+
+.backCard {
+    transform: rotateY(180deg)
+}
+
+.cardProduto:hover .frontCard {
+    transform: rotateY(-180deg);
+}
+
+.cardProduto:hover .backCard {
+    transform: rotateY(0deg);
+}
+
+}

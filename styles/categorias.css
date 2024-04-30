@@ -1,0 +1,120 @@
+@media(min-width:1280px) {
+    .container-categorias {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .titleCategorias {
+        color: black;
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+    
+      .filtrarCategoriaTitulo {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+    
+      .cardsBox {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
+      }
+    
+      .categoriaContainer {
+        border-radius: 8px;
+        width: 100px;
+        height: 100px;
+        background-color: violet;
+        overflow: hidden;
+        transition-duration: 0.3s;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .categoriaContainer:hover {
+        background-color: palevioletred;
+        transition-duration: 0.3s;
+      }
+    
+      .cardsBox i {
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: black;
+      }
+    
+      .categoriaContainer:hover i {
+        animation: slide-in-top 0.3s both;
+        color: rgb(255, 255, 255);
+      }
+}
+
+ @media(max-width:768px) {
+    .container-categorias {
+        width: 100%;
+        max-width: 90vw;
+        height: fit-content;
+        margin: 0 auto;
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .titleCategorias {
+        color: white;
+        font-size: 10px;
+        margin-top: 10px;
+        font-weight: 500;
+      }
+    
+      .filtrarCategoriaTitulo {
+        font-size: 18px;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+      }
+    
+      .cardsBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1.5rem;
+      }
+    
+      .categoriaContainer {
+        border-radius: 8px;
+        width: 80px;
+        height: 70px;
+        background-color: violet;
+        overflow: hidden;
+        transition-duration: 0.3s;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .categoriaContainer:hover {
+        background-color: palevioletred;
+        transition-duration: 0.3s;
+ }
+
+ }

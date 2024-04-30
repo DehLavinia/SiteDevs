@@ -1,0 +1,14 @@
+.container_propaganda {
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    max-width: 1280px;    
+    margin: 0 auto;     
+    border-radius: 10px;               
+}
+
+.container_propaganda img {
+    padding: 2rem;
+    width: 200px;
+}
